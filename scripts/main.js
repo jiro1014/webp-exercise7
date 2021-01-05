@@ -71,11 +71,11 @@ Ball.prototype.update = function() {
 // define ball collision detection
 
 Ball.prototype.collisionDetect = function() {
-  for(let j = 0; j < balls.length; j++) {
+  for(var j = 0; j < balls.length; j++) {
     if(!(this === balls[j])) {
-      const dx = this.x - balls[j].x;
-      const dy = this.y - balls[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+      var dx = this.x - balls[j].x;
+      var dy = this.y - balls[j].y;
+      var distance = Math.sqrt(dx * dx + dy * dy);
 
       if (distance < this.size + balls[j].size && balls[j].exists) {
         balls[j].color = this.color = 'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')';
@@ -164,6 +164,7 @@ while(balls.length < 25) {
     random(0 + size,height - size),
     random(-7,7),
     random(-7,7),
+    true,
     'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
     size
   );

@@ -186,9 +186,9 @@ function loop() {
         balls[i].collisionDetect();
       }
   }
-  Evil.draw();
-  Evil.checkBounds();
-  Evil.collisionDetect();
+  evil.draw();
+  evil.checkBounds();
+  evil.collisionDetect();
 
   requestAnimationFrame(loop);
 }
